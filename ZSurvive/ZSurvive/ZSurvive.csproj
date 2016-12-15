@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFEE2597-62BE-4FA0-BFB1-8E43E12086FB}</ProjectGuid>
+    <ProjectTypeGuids>{9B831FEF-F496-498F-9FE8-180DA5CB4258};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ZSurvive</RootNamespace>
+    <AssemblyName>ZSurvive</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="OpenTK">
+      <Package>opentk</Package>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Linux">
+      <Package>monogame</Package>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <Package>monogame</Package>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <Package>tao-sdl</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon.png" />
+    <None Include="Content\Jugador\Pisto.png" />
+    <None Include="Content\Jugador\PistoA.png" />
+    <None Include="Content\Zombies\Z2.png" />
+    <None Include="Content\Zombies\Z3.png" />
+    <None Include="Content\Audio\PistoS.wav" />
+    <None Include="Content\Zombies\Z1.png" />
+    <None Include="Content\Audio\Recarga.wav" />
+    <None Include="Content\Musica\Akashic-Stories of The Old Mansion.wav" />
+    <None Include="Content\Musica\Lzn02-The Dolls Death.wav" />
+    <None Include="Content\Musica\Nosphares-Strengths Of Evil.wav" />
+    <None Include="Content\Musica\Shamatronic-Jack the Pirate.wav" />
+    <None Include="Content\Imagenes\Intro.png" />
+    <None Include="Content\Imagenes\Mira.png" />
+    <None Include="Content\Imagenes\Pasto.png" />
+    <None Include="Content\Imagenes\Tierra.png" />
+    <None Include="Content\Imagenes\1.png" />
+    <None Include="Content\Imagenes\2.png" />
+    <None Include="Content\Imagenes\3.png" />
+    <None Include="Content\Imagenes\Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\Jugador\" />
+    <Folder Include="Content\Zombies\" />
+    <Folder Include="Content\Audio\" />
+    <Folder Include="Content\Musica\" />
+    <Folder Include="Content\Imagenes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
